@@ -29,3 +29,4 @@ bin/
 build/
 /bin1/
 java/build/**
+.vscode/settings.json

@@ -75,6 +75,8 @@ public class WebDriverManager {
     public static WebDriver openNewEdgeBrowser() {
         LoggingManager.logDebug(logger, "browser = Edge");
         io.github.bonigarcia.wdm.WebDriverManager.edgedriver().setup();
+        //String driverPath = "src/main/resources/WebDrivers/msedgedriver.exe";
+        //System.setProperty("webdriver.edge.driver", driverPath);
         EdgeOptions edgeOptions = new EdgeOptions();
         HashMap<String, Object> edgePrefs = new HashMap();
 
@@ -89,6 +91,8 @@ public class WebDriverManager {
         edgeOptions.addArguments("--allow-running-insecure-content");
         edgeOptions.addArguments("--ignore-certificate-errors=yes");
         edgeOptions.addArguments("--ignore-ssl-errors=yes");
+        //String proxy = "192.168.111.114:8080";
+        //edgeOptions.addArguments("--proxy-server=http://" + proxy);
         LoggingManager.logDebug(logger, "browser.headless = true");
 
         Object edgeDriver;
@@ -107,6 +111,8 @@ public class WebDriverManager {
     public static WebDriver openNewChromeBrowser() {
         LoggingManager.logDebug(logger, "browser = Chrome");
         io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
+        // String driverPath = "src/main/resources/WebDrivers/chromedriver.exe";
+        // System.setProperty("webdriver.chrome.driver", driverPath);
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setAcceptInsecureCerts(true);
         HashMap<String, Object> chromePreferences = new HashMap();
@@ -117,6 +123,8 @@ public class WebDriverManager {
             chromeOptions.addArguments(new String[]{"--disable-dev-shm-usage"});
             chromeOptions.addArguments(new String[]{"--disable-gpu"});
             chromeOptions.addArguments(new String[]{"--no-sandbox"});
+            //String proxy = "192.168.111.114:8080";
+            //chromeOptions.addArguments("--proxy-server=http://" + proxy);
             chromeOptions.addArguments(new String[]{"--window-size=" + PropertyUtils.getResolution()});
             chromeOptions.setHeadless(true);
         }
@@ -130,6 +138,7 @@ public class WebDriverManager {
         } else {
             chromeDriver = new ChromeDriver(chromeOptions);
         }
+        
         setWebDriver((WebDriver) chromeDriver);
         return (WebDriver) chromeDriver;
     }

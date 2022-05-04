@@ -1,8 +1,8 @@
 @Smoke
-  @Search
 Feature: Going to https://www.hitachivantara.com/ through Google search
 
   # An example for PASSED cased
+  @TC_01
   Scenario: Verify that the user can open hitachivantara.com through Google search
     Given I'm on the Google search
     When I enter "Hitachi Vantara com" into search text box
@@ -10,6 +10,7 @@ Feature: Going to https://www.hitachivantara.com/ through Google search
     Then I verify that "Hitachi Vantara" site is at the first in search result
 
 #  # An example for FAILED cased
+#  @TC_02
 #  Scenario: Verify that the user can open hitachivantara.com through Google search
 #    Given I'm on the Google search
 #    When I enter "Global Cybersoft" into search text box
