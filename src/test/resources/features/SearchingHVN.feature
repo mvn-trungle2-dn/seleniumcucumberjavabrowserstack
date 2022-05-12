@@ -9,10 +9,10 @@ Feature: Going to https://www.hitachivantara.com/ through Google search
     And I click Search button
     Then I verify that "Hitachi Vantara" site is at the first in search result
 
-#  # An example for FAILED cased
-#  @TC_02
-#  Scenario: Verify that the user can open hitachivantara.com through Google search
-#    Given I'm on the Google search
-#    When I enter "Global Cybersoft" into search text box
-#    And I click Search button
-#    Then I verify that "Hitachi Vantara" site is at the first in search result
+  # An example for FAILED cased
+  @TC_02
+  Scenario: Verify that the user can open hitachivantara.com through Google search
+    Given I'm on the Google search
+    When I enter "Global Cybersoft" into search text box
+    And I click Search button
+    Then I verify that "Hitachi Vantara" site is at the first in search result
