@@ -42,4 +42,8 @@ public class GoogleHomePage extends BasePage {
     public String getResultNumberInList(int index) {
         return getText(searchResultList.get(index - 1), "Unable to get result").trim();
     }
+
+    // public void clickOnLink(){
+
+    // }
 }

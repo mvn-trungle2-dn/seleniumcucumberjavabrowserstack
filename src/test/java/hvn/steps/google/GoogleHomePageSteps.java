@@ -1,4 +1,4 @@
-package hvn.steps;
+package hvn.steps.google;
 
 
 import common.LoggingManager;
@@ -6,6 +6,7 @@ import common.utils.PropertyUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import hvn.pages.GoogleHomePage;
+import hvn.steps.BaseSteps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -36,6 +37,7 @@ public class GoogleHomePageSteps extends BaseSteps {
     public void verifyResult(String site) {
         String actualResult = new GoogleHomePage().getResultNumberInList(1);
         boolean result = actualResult.contains(site);
-        LoggingManager.assertTrue(getClassName(), result, site + " is at the first in search result", "Failed to verify search result");
+        LoggingManager.assertTrue(getClassName(), result, site + " is at the first in search result",
+                "Failed to verify search result");
     }
 }

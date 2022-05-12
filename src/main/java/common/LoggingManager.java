@@ -27,6 +27,7 @@ public class LoggingManager {
 
     public static void logPass(String className, String message) {
         getLogger(className).info(message);
+        Assert.assertTrue(true);
     }
 
     public static void logError(String className, String message) {
