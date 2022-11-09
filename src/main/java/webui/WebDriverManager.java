@@ -145,7 +145,7 @@ public class WebDriverManager {
 
     public static WebDriver openNewFirefoxBrowser() {
         LoggingManager.logDebug(logger, "browser = Firefox");
-        io.github.bonigarcia.wdm.WebDriverManager.firefoxdriver().setup();
+
         FirefoxProfile firefoxProfile = new FirefoxProfile();
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.setAcceptInsecureCerts(true);
